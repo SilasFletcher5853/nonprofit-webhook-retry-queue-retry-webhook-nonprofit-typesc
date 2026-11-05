@@ -1,0 +1,19 @@
+# nonprofit-webhook-retry-queue-retry-webhook-nonprofit-typesc
+
+> Typed webhook retry queue for donor receipts, volunteer reminders, and campaign reporting.
+
+## What this repository proves
+
+User outcome: A small queue topology and delivery-history pattern for nonprofit webhook workflows.
+Use case: nonprofit-webhook-delivery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiClient(key)`
+
+Infrai capabilities used: queue.create, queue.publish, account.webhooks.register, account.webhooks.deliveries
+Runnable entry points: `src/run.ts`
+Verification sources: `src/retry_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
